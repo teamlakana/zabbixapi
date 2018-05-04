@@ -31,6 +31,7 @@ describe 'item' do
           :status => 0,
           :hostid => @templateid,
           :history      => 3600,
+          :trends       => 86400,
           :applications => [@applicationid]
         )
         expect(itemid).to be_kind_of(Integer)
@@ -53,6 +54,7 @@ describe 'item' do
         :status => 0,
         :hostid => @templateid,
         :history      => 3600,
+        :trends       => 86400,
         :applications => [@applicationid]
       )
     end
@@ -66,6 +68,7 @@ describe 'item' do
             :status => 0,
             :hostid => @templateid,
             :history      => 3600,
+            :trends       => 86400,
             :applications => [@applicationid]
           )
         ).to eq @itemid
@@ -108,6 +111,7 @@ describe 'item' do
             :status => 0,
             :hostid => @templateid,
             :history      => 3600,
+            :trends       => 86400,
             :applications => [@applicationid]
           )
         ).to eq @itemid
@@ -120,6 +124,7 @@ describe 'item' do
           :status => 0,
           :hostid => @templateid,
           :history      => 3600,
+          :trends       => 86400,
           :applications => [@applicationid]
         )
 

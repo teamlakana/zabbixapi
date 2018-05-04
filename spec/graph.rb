@@ -23,6 +23,7 @@ describe 'graph' do
       :status => 0,
       :hostid => @templateid,
       :history      => 3600,
+      :trends       => 86400,
       :applications => [@applicationid]
     )
 

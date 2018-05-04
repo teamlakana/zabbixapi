@@ -13,7 +13,7 @@ describe 'usergroup' do
   context 'when exists' do
     before do
       @usergroup = gen_name 'usergroup'
-      @usergroupid = zbx.usergroups.create(:name => @usergroup).map{ |gid| { :usrgrpid => gid } }
+      @usergroupid = zbx.usergroups.create(:name => @usergroup).to_a.map{ |gid| { :usrgrpid => gid } }
       @user = gen_name 'user'
       @userid = zbx.users.create(
         :alias => @user,
@@ -24,7 +24,7 @@ describe 'usergroup' do
       )
 
       @usergroup2 = gen_name 'usergroup'
-      @usergroupid2 = zbx.usergroups.create(:name => @usergroup2).map{ |gid| { :usrgrpid => gid } }
+      @usergroupid2 = zbx.usergroups.create(:name => @usergroup2).to_a.map{ |gid| { :usrgrpid => gid } }
       @user2 = gen_name 'user'
       @userid2 = zbx.users.create(
         :alias => @user2,

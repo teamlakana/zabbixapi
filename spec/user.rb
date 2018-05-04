@@ -5,7 +5,7 @@ require 'spec_helper'
 describe 'user' do
   before :all do
     @usergroup = gen_name 'usergroup'
-    @usergroupid = zbx.usergroups.create(:name => @usergroup).map{ |gid| { :usrgrpid => gid } }
+    @usergroupid = zbx.usergroups.create(:name => @usergroup).to_a.map{ |gid| { :usrgrpid => gid } }
 
     @mediatype = gen_name 'mediatype'
     @mediatypeid = zbx.mediatypes.create(
