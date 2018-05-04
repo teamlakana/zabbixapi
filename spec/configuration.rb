@@ -24,6 +24,7 @@ describe 'configuration' do
       :key_         => 'proc.num[aaa]',
       :type         => 0,
       :value_type   => 3,
+      :history      => 3600,
       :hostid       => zbx.templates.get_id(:host => @template)
     )
   end
@@ -70,6 +71,7 @@ describe 'configuration' do
           :key_         => 'proc.num[aaa]',
           :type         => 0,
           :value_type   => 3,
+          :history      => 3600,
           :hostid       => zbx.templates.get_id(:host => @template)
         )
       end

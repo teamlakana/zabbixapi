@@ -23,6 +23,7 @@ describe 'trigger' do
       :key_ => @proc,
       :status => 0,
       :hostid => @templateid,
+      :history      => 3600,
       :applications => [@applicationid]
     )
   end

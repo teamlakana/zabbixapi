@@ -15,7 +15,7 @@ zbx.httptests.create(
     {
       :name => "step",
       :url => "http://localhost/zabbix/",
-      :status_codes => 200,
+      :status_codes => "200",
       :no => 1
     }
   ]
@@ -30,13 +30,13 @@ zbx.httptests.create_or_update(
     {
       :name => "step",
       :url => "http://localhost/zabbix/",
-      :status_codes => 200,
+      :status_codes => "200",
       :no => 1
     },
     {
       :name => "step 2",
       :url => "http://localhost/zabbix/index.php",
-      :status_codes => 200,
+      :status_codes => "200",
       :no => 2
     }
   ]

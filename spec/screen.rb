@@ -22,6 +22,7 @@ describe 'screen' do
       :key_ => "proc.num[#{gen_name 'proc'}]",
       :status => 0,
       :hostid => @templateid,
+      :history      => 3600,
       :applications => [@applicationid]
     )
 
