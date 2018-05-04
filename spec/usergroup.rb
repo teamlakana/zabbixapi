@@ -71,7 +71,7 @@ describe 'usergroup' do
       it 'should return id' do
         expect(
           zbx.usergroups.set_perms(
-            :usrgrpid => [@usergroupid],
+            :usrgrpid => @usergroupid,
             :hostgroupids => zbx.hostgroups.all.values,
             :permission => 3
           )
@@ -85,7 +85,7 @@ describe 'usergroup' do
       end
 
       it 'should return id of deleted group' do
-        usergroupids = zbx.usergroups.create(:name => gen_name('usergroup'))
+        usergroupid = zbx.usergroups.create(:name => gen_name('usergroup'))
 
         expect(zbx.usergroups.delete(usergroupid)).to eq usergroupid
       end
