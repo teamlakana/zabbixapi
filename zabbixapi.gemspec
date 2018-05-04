@@ -7,8 +7,6 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'zabbixapi/version'
 
 Gem::Specification.new do |spec|
-  spec.add_dependency 'http', '~> 2.0'
-  spec.add_dependency 'json', '~> 2.0'
   spec.add_development_dependency 'bundler', '~> 1.0'
 
   spec.name        = 'zabbixapi'
