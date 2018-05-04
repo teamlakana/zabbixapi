@@ -5,7 +5,7 @@ require 'spec_helper'
 describe 'user' do
   before :all do
     @usergroup = gen_name 'usergroup'
-    @usergroupid = zbx.usergroups.create(:name => @usergroup).to_a.map{ |gid| { :usrgrpid => gid } }
+    @usergroupids = zbx.usergroups.create(:name => @usergroup)
 
     @mediatype = gen_name 'mediatype'
     @mediatypeid = zbx.mediatypes.create(
@@ -36,7 +36,7 @@ describe 'user' do
           :name => user,
           :surname => user,
           :passwd => user,
-          :usrgrps => @usergroupid
+          :usrgrps => @usergroupids.map{ |gid| { :usrgrpid => gid } }
         )
         expect(userid).to be_kind_of(Integer)
       end
@@ -57,7 +57,7 @@ describe 'user' do
         :name => @user,
         :surname => @user,
         :passwd => @user,
-        :usrgrps => @usergroupid
+        :usrgrps => @usergroupids.map{ |gid| { :usrgrpid => gid } }
       )
     end
 
